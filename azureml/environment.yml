@@ -1,0 +1,12 @@
+name: cv-azure-env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+      - tensorflow==2.12.0
+      - numpy
+      - opencv-python
+      - azure-ai-ml
+      - mlflow

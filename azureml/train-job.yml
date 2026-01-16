@@ -1,9 +1,9 @@
 $schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
 type: command
-code: ./src/training
+code: ../src/training
 environment:
+  image: mcr.microsoft.com/azureml/openmpi4.1.0-ubuntu20.04
   conda_file: ../azureml/environment.yml
-  image: mcr.microsoft.com/azureml/base:latest
 command: >
   python train.py 
   --epochs 10 

@@ -1,0 +1,12 @@
+$schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
+type: command
+code: ./src/training
+environment:
+  conda_file: ../azureml/environment.yml
+  image: mcr.microsoft.com/azureml/base:latest
+command: >
+  python train.py 
+  --epochs 10 
+  --batch_size 64 
+  --output_dir outputs
+compute: azureml:ci-cv01
